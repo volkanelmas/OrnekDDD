@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  ordertestdb:
+    container_name: ordertestdb
+    restart: always
+    ports:
+      - "1445:1433"
+    volumes:
+      - ordertestdb_volume:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password12*
