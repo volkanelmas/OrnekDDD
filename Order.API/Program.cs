@@ -22,7 +22,6 @@ builder.Services.AddDbContext<OrderDbContext>(opt =>
 });
 
 //Assembly istiyor. bizimki application da
-//FreeCourse.Services.Order.Application
 //aþaðýdaki tipin baðlý olduðu assambly alýnmýþ oldu
 builder.Services.AddMediatR(typeof(Order.Application.Handlers.CreateOrderCommandHandler).Assembly);
 
